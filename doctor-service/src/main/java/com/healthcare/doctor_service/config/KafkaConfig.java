@@ -8,7 +8,7 @@ import java.util.*;
 
 @Configuration
 public class KafkaConfig {
-    @Bean
+    @Bean(name = "taskExecutor")
     public ProducerFactory<String, String> producerFactory() {
         Map<String, Object> props = new HashMap<>();
         props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, System.getenv().getOrDefault("KAFKA_BOOTSTRAP","localhost:9092"));
