@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: doctor-service
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+
+logging:
+  level:
+    root: WARN

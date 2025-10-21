@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: doctor-service
+
+logging:
+  level:
+    root: INFO

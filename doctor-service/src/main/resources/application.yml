@@ -1,0 +1,55 @@
+spring:
+  application:
+    name: DOCTOR-SERVICE
+  profiles:
+    active:
+  jackson:
+    serialization:
+      WRITE_DATES_AS_TIMESTAMPS: false
+  mvc:
+    problemdetails:
+      enabled: true
+  datasource:
+    url: jdbc:mysql://localhost:3306/doctor-async
+    username: root
+    password: Abhi@123
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+
+server:
+  port: 8083
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,prometheus
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+
+kafka:
+  bootstrap-servers: ${KAFKA_BOOTSTRAP:localhost:9092}
+
+external:
+  review-service-base-url: ${REVIEW_BASE_URL:http://localhost:8088}
+  appointment-service-base-url: ${APPOINTMENT_BASE_URL:http://localhost:8084}
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+    hostname: localhost
+
+
+
