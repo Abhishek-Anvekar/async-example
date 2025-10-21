@@ -1,5 +1,6 @@
-For @Async and CompletableFuture, check --> Appointment-service main class, AsyncConfig class, AppointmentDomainService class, and ExternalServiceClient class.
-For @UniqueConstraint and Optimistic Locking, check --> AvailabilitySlot entity class: @Version used for Optimistic Locking, AvailabilityService class --> check blockSlots() method for Optimistic lock exception.
+
+- For @Async and CompletableFuture, check --> Appointment-service main class, AsyncConfig class, AppointmentDomainService class, and ExternalServiceClient class.
+- For @UniqueConstraint and Optimistic Locking, check --> AvailabilitySlot entity class: @Version used for Optimistic Locking, AvailabilityService class --> check blockSlots() method for Optimistic lock exception.
 
 ---
 
